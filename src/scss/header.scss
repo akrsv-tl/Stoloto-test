@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    background-color: $container-bg;
+}
+
+.header__tabs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header__tab {
+    display: block;
+    border-radius: 10px;
+    background-image: $tabs-gradient;
+    width: 60px;
+    height: 60px;
+    margin-right: 6px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 1.13px;
+    text-align: center;
+    &:hover {
+        background-image: none;
+        background-color: $tabs-hover;
+    }
+}
+
+.header__tab--active {
+    border: 5px solid #fe8933;
+    background-color: $tabs-hover;
+    background-image: none;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+}

@@ -1,0 +1,32 @@
+@import"./selectors__circulation/selectors__circulation.scss";
+@import"./selectors__quantity/selectors__quantity.scss";
+
+.main__control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 190px;
+}
+
+.control__button {
+    background-image: $select-gradient;
+    border: none;
+}
+
+.control__text {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    color: $text-white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 15.36px;
+    letter-spacing: 1.13px;
+}
+
+.control__text--big {
+    font-size: 23px;
+    margin-top: 24px;
+}

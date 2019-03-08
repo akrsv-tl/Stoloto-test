@@ -1,0 +1,28 @@
+@import"variables.scss";
+@import"header.scss";
+@import"./main__rules/main__rules.scss";
+@import"./main__fields/main__fields.scss";
+@import"./main__control/main__control.scss";
+
+.container {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    padding-left: 7px;
+    background-color: $container-bg;
+    font-family: $main-font;
+    color: $text-color;
+}
+
+.main {
+    display: flex;
+    width: 915px;
+    height: 668px;
+    background-color: $main-bg;
+}
+
+.button {
+    width: 168px;
+    height: 58px;
+    border-radius: 10px;
+}

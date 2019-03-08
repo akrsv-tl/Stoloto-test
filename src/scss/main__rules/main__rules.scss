@@ -1,0 +1,9 @@
+@import"./logo/logo.scss";
+@import"./description/description.scss";
+
+.main__rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 340px;
+}

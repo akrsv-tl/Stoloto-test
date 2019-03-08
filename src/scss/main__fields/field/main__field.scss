@@ -1,0 +1,49 @@
+.field__heading {
+    height: 50px;
+    background-color: $field-hd-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0.9px;
+    text-align: center;
+}
+
+.field__game {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 230px;
+    padding: 10px;
+}
+
+.field__game-item {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 2px solid #eeeeee;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.field__game-item--active {
+    border: 2px solid #febe78;
+    border-radius: 50%;
+    background-color: #fdfcf0;
+}
+
+.fields__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.fields__button {
+    margin: 0 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22.82px;
+    letter-spacing: 0.9px;
+}

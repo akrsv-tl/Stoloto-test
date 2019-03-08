@@ -1,0 +1,29 @@
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo__logotype {
+    width: 150px;
+    margin-top: 30px;
+}
+
+.logo__text {
+    color: $text-white;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.logo__rules {
+    width: 104px;
+    height: 39px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #ffbf42;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.82px;
+    letter-spacing: 0.9px;
+}

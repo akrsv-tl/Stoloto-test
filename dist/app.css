@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background-color: #1a1c1d; }
+
+.header__tabs {
+  display: flex;
+  align-items: center;
+  list-style: none; }
+
+.header__tab {
+  display: block;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #929292 0%, #c7c7c7 13%, white 100%);
+  width: 60px;
+  height: 60px;
+  margin-right: 6px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 1.13px;
+  text-align: center; }
+  .header__tab:hover {
+    background-image: none;
+    background-color: #f1c577; }
+
+.header__tab--active {
+  border: 5px solid #fe8933;
+  background-color: #f1c577;
+  background-image: none;
+  width: 55px;
+  height: 55px;
+  line-height: 55px; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.logo__logotype {
+  width: 150px;
+  margin-top: 30px; }
+
+.logo__text {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 25px; }
+
+.logo__rules {
+  width: 104px;
+  height: 39px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background-color: #ffbf42;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22.82px;
+  letter-spacing: 0.9px; }
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px; }
+
+.description__heading {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 5px; }
+
+.description__heading--big {
+  color: #fff;
+  font-size: 41px;
+  font-weight: 700; }
+
+.description__text {
+  width: 274px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400; }
+
+.main__rules {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 340px; }
+
+.field__heading {
+  height: 50px;
+  background-color: #ffbf42;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.9px;
+  text-align: center; }
+
+.field__game {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 230px;
+  padding: 10px; }
+
+.field__game-item {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border: 2px solid #eeeeee;
+  border-radius: 50%;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center; }
+
+.field__game-item--active {
+  border: 2px solid #febe78;
+  border-radius: 50%;
+  background-color: #fdfcf0; }
+
+.fields__buttons {
+  display: flex;
+  justify-content: center; }
+
+.fields__button {
+  margin: 0 5px;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22.82px;
+  letter-spacing: 0.9px; }
+
+.main__fields {
+  width: 390px;
+  background-color: #fff; }
+
+.selectors__circulation {
+  margin-bottom: 24px; }
+
+.control__selector--s {
+  width: 74px;
+  height: 45px;
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #929292 0%, #c7c7c7 13%, #ffffff 100%); }
+
+.control__selector--m {
+  width: 106px;
+  height: 45px;
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #929292 0%, #c7c7c7 13%, #ffffff 100%); }
+
+.selectors__quantity {
+  margin-bottom: 15px; }
+
+.main__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 190px; }
+
+.control__button {
+  background-image: linear-gradient(to top, #929292 0%, #c7c7c7 13%, #ffffff 100%);
+  border: none; }
+
+.control__text {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15.36px;
+  letter-spacing: 1.13px; }
+
+.control__text--big {
+  font-size: 23px;
+  margin-top: 24px; }
+
+.container {
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  padding-left: 7px;
+  background-color: #1a1c1d;
+  font-family: "PT Sans";
+  color: #000; }
+
+.main {
+  display: flex;
+  width: 915px;
+  height: 668px;
+  background-color: #fe8933; }
+
+.button {
+  width: 168px;
+  height: 58px;
+  border-radius: 10px; }
+
