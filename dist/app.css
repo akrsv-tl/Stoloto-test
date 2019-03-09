@@ -22,7 +22,8 @@
   font-weight: 400;
   line-height: 60px;
   letter-spacing: 1.13px;
-  text-align: center; }
+  text-align: center;
+  user-select: none; }
   .header__tab:hover {
     background-image: none;
     background-color: #f1c577; }
