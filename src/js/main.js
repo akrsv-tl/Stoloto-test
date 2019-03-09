@@ -23,7 +23,15 @@ var stateApp = {
 
 stateApp.container.addEventListener('click', e => {
     if(e.target.closest('#exit-btn') !== null) {
-        stateApp.container.removeChild(document.getElementById('game-page'));
+        return stateApp.container.removeChild(document.getElementById('game-page'));
+    }
+
+    if(e.target.closest('#field-game-1') !== null) {
+        return toggleFieldGame();
+    }
+
+    if(e.target.closest('#field-game-2') !== null) {
+
     }
 });
 
