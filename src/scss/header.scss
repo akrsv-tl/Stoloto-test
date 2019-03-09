@@ -15,6 +15,7 @@
 .header__tab {
     display: block;
     border-radius: 10px;
+    @include border(5px, $container-bg);
     background-image: $tabs-gradient;
     width: 60px;
     height: 60px;
@@ -34,7 +35,7 @@
     @include border(5px, #fe8933);
     background-color: $tabs-hover;
     background-image: none;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     line-height: 55px;
 }

@@ -30,10 +30,17 @@ stateApp.container.addEventListener('click', e => {
 stateApp.headerTabs.addEventListener('click', e => {
     if(e.target.tagName !== 'LI') return null;
     var value = e.target.value;
+    if(value === stateApp.selectPage) return null;
+    
+    e.target.classList.add('header__tab--active');
+
+    var currentElem = e.currentTarget.querySelector(`li[value="${stateApp.selectPage}"]`);
+    currentElem.classList.remove('header__tab--active');
+
     var page = document.getElementById('game-page');
 
     //Если страничка уже выбранна то просто выходим
-    if(value === stateApp.selectPage) return null;
+    
     
     //Заменяем выбранную страничку на новую
     stateApp.selectPage = value;
