@@ -54,7 +54,7 @@
   width: 104px;
   height: 39px;
   border-radius: 10px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   background-color: #ffbf42;
   font-size: 15px;
   font-weight: 700;
@@ -113,9 +113,10 @@
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  border: 2px solid #eeeeee;
+  border: 2px solid #eee;
   border-radius: 50%;
   font-size: 25px;
+  font-weight: 400;
   line-height: 50px;
   text-align: center; }
 
@@ -183,6 +184,7 @@
 
 .control__text--big {
   font-size: 23px;
+  font-weight: 400;
   margin-top: 24px; }
 
 .container {

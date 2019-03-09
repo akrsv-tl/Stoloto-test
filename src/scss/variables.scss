@@ -8,3 +8,10 @@ $select-gradient: linear-gradient(to top, #929292 0%, #c7c7c7 13%, #ffffff 100%)
 $main-font: "PT Sans";
 $text-color: #000;
 $text-white: #fff;
+@mixin border ($size, $color) {
+    border: $size solid $color;
+};
+@mixin font ($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
