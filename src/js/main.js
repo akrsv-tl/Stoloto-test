@@ -1,8 +1,6 @@
 import { renderHtmlCode, removeChild, stringToNode } from './tools/index';
-import './header/tabs';
+import { toggleFieldGame } from './main__fields/toggle_fields';
 import { gamePage } from './pageTemplate';
-
-
 
 var stateApp = {
     headerTabs: document.getElementById('header_tabs'),   
@@ -23,33 +21,38 @@ var stateApp = {
 
 stateApp.container.addEventListener('click', e => {
     if(e.target.closest('#exit-btn') !== null) {
+        var currentElem = stateApp.container.querySelector(`li[value="${stateApp.selectPage}"]`);
+        currentElem.classList.remove('header__tab--active');
+        
+        stateApp.selectPage = null;
+
         return stateApp.container.removeChild(document.getElementById('game-page'));
     }
 
     if(e.target.closest('#field-game-1') !== null) {
-        return toggleFieldGame();
+        return toggleFieldGame(stateApp, e.target, 1);
     }
 
     if(e.target.closest('#field-game-2') !== null) {
-
+        return toggleFieldGame(stateApp, e.target, 2);
     }
 });
 
 stateApp.headerTabs.addEventListener('click', e => {
     if(e.target.tagName !== 'LI') return null;
     var value = e.target.value;
+    //Если страничка уже выбранна то просто выходим
     if(value === stateApp.selectPage) return null;
     
     e.target.classList.add('header__tab--active');
 
-    var currentElem = e.currentTarget.querySelector(`li[value="${stateApp.selectPage}"]`);
-    currentElem.classList.remove('header__tab--active');
+    if(stateApp.selectPage !== null) { 
+        var currentElem = e.currentTarget.querySelector(`li[value="${stateApp.selectPage}"]`);
+        currentElem.classList.remove('header__tab--active');
+    }
 
     var page = document.getElementById('game-page');
 
-    //Если страничка уже выбранна то просто выходим
-    
-    
     //Заменяем выбранную страничку на новую
     stateApp.selectPage = value;
 
