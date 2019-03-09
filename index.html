@@ -9,22 +9,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div id="container" class="container">
         <div class="header">
-            <ul class="header__tabs">
-                <li class="header__tab header__tab--active">А</li>
-                <li class="header__tab">Б</li>
-                <li class="header__tab">В</li>
-                <li class="header__tab">Г</li>
-                <li class="header__tab">Д</li>
-                <li class="header__tab">Е</li>
-                <li class="header__tab">Ж</li>
-                <li class="header__tab">З</li>
-                <li class="header__tab">И</li>
-                <li class="header__tab">К</li>
+            <ul id="header_tabs" class="header__tabs">
+                <li value="0" class="header__tab header__tab--active">А</li>
+                <li value="1" class="header__tab">Б</li>
+                <li value="2" class="header__tab">В</li>
+                <li value="3" class="header__tab">Г</li>
+                <li value="4" class="header__tab">Д</li>
+                <li value="5" class="header__tab">Е</li>
+                <li value="6" class="header__tab">Ж</li>
+                <li value="7" class="header__tab">З</li>
+                <li value="8" class="header__tab">И</li>
+                <li value="9" class="header__tab">К</li>
             </ul>
         </div>
-        <div class="main">
+        <!--
+        <div id="game-page" class="main">
             <div class="main__rules">
                 <div class="logo">
                     <img src="./src/img/logo.png" alt="Logo" class="logo__logotype">
@@ -44,7 +45,7 @@
             <div class="main__fields fields">
                 <div class="main__field field">
                     <div class="field__heading">Отметьте не менее 4 чисел в первой части поля</div>
-                    <div class="field__game">
+                    <div id="field-game-1" class="field__game">
                         <div class="field__game-item">1</div>
                         <div class="field__game-item">2</div>
                         <div class="field__game-item">3</div>
@@ -69,7 +70,7 @@
                 </div>
                 <div class="main__field field">
                     <div class="field__heading">Отметьте не менее 4 чисел во второй части поля</div>
-                    <div class="field__game">
+                    <div id="field-game-2" class="field__game">
                         <div class="field__game-item">1</div>
                         <div class="field__game-item">2</div>
                         <div class="field__game-item">3</div>
@@ -98,7 +99,7 @@
                 </div>
             </div>
             <div class="main__control control">
-                <button class="button control__button"><span class="fas fa-times"></span>Выйти</button>
+                <button id="exit-btn" class="button control__button"><span class="fas fa-times"></span>Выйти</button>
                 <div class="control__selectors selectors">
                     <div class="selectors__circulation">
                         <span class="control__text">Тираж</span>
@@ -128,6 +129,7 @@
                 <button class="button control__button">Подтвердить</button>
             </div>
         </div>
+    -->
     </div>
 
     <script src="./dist/app.js"></script>
