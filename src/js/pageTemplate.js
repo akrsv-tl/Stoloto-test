@@ -6,7 +6,7 @@ export function gamePage(page) {
         <div class="logo">
             <img src="./src/img/logo.png" alt="Logo" class="logo__logotype">
             <span class="logo__text">«Гослото «4 из 20»</span>
-            <button class="logo__rules">Правила</button>
+            <button id="rules-btn" class="logo__rules">Правила</button>
         </div>
         <div class="description">
             <span class="description__heading">Суперприз</span>
@@ -32,8 +32,8 @@ export function gamePage(page) {
             </div>
         </div>
         <div class="fields__buttons">
-            <button class="button fields__button"><span class="fas fa-magic"></span>Случайные числа</button>
-            <button class="button fields__button"><span class="fas fa-times"></span>Очистить</button>
+            <button id="random-numbers" class="button fields__button"><span class="fas fa-magic"></span>Случайные числа</button>
+            <button id="clear-numbers" class="button fields__button"><span class="fas fa-times"></span>Очистить</button>
         </div>
     </div>
     <div class="main__control control">

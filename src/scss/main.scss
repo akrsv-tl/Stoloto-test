@@ -25,4 +25,8 @@
     width: 168px;
     height: 58px;
     border-radius: 10px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
 }

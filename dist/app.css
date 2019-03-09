@@ -24,6 +24,7 @@
   line-height: 55px;
   letter-spacing: 1.13px;
   text-align: center;
+  cursor: pointer;
   user-select: none; }
   .header__tab:hover {
     background-image: none;
@@ -61,7 +62,10 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 22.82px;
-  letter-spacing: 0.9px; }
+  letter-spacing: 0.9px;
+  cursor: pointer; }
+  .logo__rules:focus {
+    outline: none; }
 
 .description {
   display: flex;
@@ -120,7 +124,10 @@
   font-size: 25px;
   font-weight: 400;
   line-height: 50px;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
+  .field__game-item:hover {
+    border: 2px solid #febe78; }
 
 .field__game-item--active {
   border: 2px solid #febe78;
@@ -207,5 +214,8 @@
 .button {
   width: 168px;
   height: 58px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  cursor: pointer; }
+  .button:focus {
+    outline: none; }
 

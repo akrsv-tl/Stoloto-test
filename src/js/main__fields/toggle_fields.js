@@ -14,7 +14,5 @@ export function toggleFieldGame(state, action, field) {
         fieldGame.push(value);
     }
 
-    var page = document.getElementById('game-page');
-    state.container.removeChild(page);
-    state.container.appendChild(stringToNode(gamePage(state.gamePages[state.selectPage])));
+    state.render();
 }
