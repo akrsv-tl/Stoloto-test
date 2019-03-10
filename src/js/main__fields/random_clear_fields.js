@@ -1,5 +1,12 @@
-export function clearFieldGame(state, field) {
-    state.gamePages[state.selectPage]['activeFieldItem' + field] = [];
+export function clearFieldGame(state) {
+    state.gamePages = {
+        [state.selectPage]: {
+            activeFieldItem1: [],
+            activeFieldItem2: []
+        }
+    }
+
+    state.render();
 }
 
 export function randomFieldGame(state, field) {

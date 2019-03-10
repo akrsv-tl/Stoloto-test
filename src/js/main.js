@@ -63,9 +63,7 @@ stateApp.container.addEventListener('click', e => {
     }
 
     if(e.target.closest('#clear-numbers') !== null) {
-        clearFieldGame(stateApp, 1);
-        clearFieldGame(stateApp, 2);
-        return stateApp.render();
+        clearFieldGame(stateApp);
     }
     
     if(e.target.closest('#random-numbers') !== null) {
