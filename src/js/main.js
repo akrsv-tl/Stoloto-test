@@ -86,6 +86,7 @@ stateApp.container.addEventListener('click', e => {
         renderHeaderTabs(stateApp, null);
         let page = document.getElementById('game-page');
         stateApp.container.removeChild(page);
+        return null;
     }
 
     if(e.target.closest('#field-game-1') !== null) {
@@ -109,6 +110,9 @@ stateApp.container.addEventListener('click', e => {
         confirmBet(stateApp);
         return null;
     }
+    if(e.target.closest('#rules-btn') !== null) {
+        toggleShowHelp();
+    }
 });
 
 stateApp.headerTabs.addEventListener('click', e => {
@@ -131,6 +135,24 @@ stateApp.headerTabs.addEventListener('click', e => {
     renderHeaderTabs(stateApp, value);
     stateApp.render();
 });
+
+let modal = document.getElementById('modal-window');
+let closeBtn = document.getElementsByClassName('modal__close')[0];
+
+function toggleShowHelp() {
+    modal.style.display = 'block';
+}
+
+closeBtn.onclick = function() {
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
 
 //Точка входа(Первоначальная отрисовка)
 stateApp.render();

@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
+    "build": "webpack-dev-server --open --mode production",
     "watch": "webpack -w",
-    "test": "jest",
-    "start": "команда для запуска приложения"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,8 @@
   },
   "homepage": "https://github.com/A-Moreira/Stoloto-test#readme",
   "dependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "node-static": "^0.7.11"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

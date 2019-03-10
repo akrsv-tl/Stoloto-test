@@ -25,7 +25,10 @@
     line-height: 22.82px;
     letter-spacing: 0.9px;
     cursor: pointer;
+    &:hover {
+        background-color: $tabs-hover;
+    };
     &:focus {
         outline: none;
-    }
+    };
 }
