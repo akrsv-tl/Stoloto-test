@@ -1,5 +1,6 @@
 import { renderHtmlCode, removeChild, stringToNode } from './tools/index';
 import { toggleFieldGame } from './main__fields/toggle_fields';
+import { randomFieldGame, clearFieldGame } from './main__fields/random_clear_fields';
 import { gamePage } from './pageTemplate';
 
 const stateApp = {
@@ -44,8 +45,6 @@ function renderPageGame() {
 
     //Отрисовывем выбранную страничку
     stateApp.container.appendChild(stringToNode(gamePage(stateApp.gamePages[stateApp.selectPage])));
-    //т.к. старые event удалились
-    addEventListener(); 
 }
 
 stateApp.container.addEventListener('click', e => {
@@ -62,15 +61,27 @@ stateApp.container.addEventListener('click', e => {
     if(e.target.closest('#field-game-2') !== null) {
         return toggleFieldGame(stateApp, e.target, 2);
     }
+
+    if(e.target.closest('#clear-numbers') !== null) {
+        clearFieldGame(stateApp, 1);
+        clearFieldGame(stateApp, 2);
+        return stateApp.render();
+    }
+    
+    if(e.target.closest('#random-numbers') !== null) {
+        randomFieldGame(stateApp, 1);
+        randomFieldGame(stateApp, 2);
+        return null;
+    }
 });
 
 stateApp.headerTabs.addEventListener('click', e => {
     if(e.target.tagName !== 'LI') return null;
     let value = e.target.value;
-    //Если страничка уже выбранна то просто выходим
+    //Если страничка уже выбранна, то просто выходим
     if(value === stateApp.selectPage) return null;
     
-    //Если такой странички в нашем объекте еще нету то добавляем
+    //Если такой странички нет, то добавляем
     if(!stateApp.gamePages.hasOwnProperty(value)) {
         stateApp.gamePages[value] =  {
             activeFieldItem1: [],
@@ -82,29 +93,6 @@ stateApp.headerTabs.addEventListener('click', e => {
     stateApp.render();
 
 });
-
-function addEventListener() {
-    let randomBtn = document.getElementById('random-numbers');
-    randomBtn.addEventListener('click', () => {
-        random(stateApp, 1);
-        random(stateApp, 2)
-    });
-}
-
-function random(state, field) {
-    state.gamePages[state.selectPage]['activeFieldItem'+field] = [];
-    let fieldGame = state.gamePages[state.selectPage]['activeFieldItem'+field];
-
-    for(let i = 0; i < 4; i++) {
-        let random;
-        do {
-            random = Math.floor(Math.random() * (20 - 1)) + 1;
-        } while(fieldGame.includes(random) || !(random > 0));
-        
-        fieldGame.push(random);
-    }
-    stateApp.render(); 
-}
 
 //Точка входа(Первоначальная отрисовка)
 stateApp.render();
