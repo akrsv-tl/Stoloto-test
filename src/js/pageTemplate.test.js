@@ -1,7 +1,26 @@
-import { fieldGame } from './main__fields/select_numbers'
+const pageGame = require('./pageTemplate.js').default;
 
-export default function gamePage(page) {
-    return `<div id="game-page" class="main">
+const stateApp = {
+    headerTabs: document.getElementById('header_tabs'),   
+    container: document.getElementById('container'),
+    applyBtn: () => document.getElementById('apply-btn'),
+    apply: false,
+    showGamePage: true,
+    selectPage: 0,
+    gamePages: {
+        0: {
+            activeFieldItem1: [],
+            activeFieldItem2: [],
+            betValue: 0,
+            quantity: 1,
+            circulation: 1
+        }
+    },
+    betValue: 0,
+    render: () => {}
+}
+
+const testTrue =`<div id="game-page" class="main">
     <div class="main__rules">
         <div class="logo">
             <img src="./src/img/logo.png" alt="Logo" class="logo__logotype">
@@ -22,13 +41,13 @@ export default function gamePage(page) {
         <div class="main__field field">
             <div class="field__heading">Отметьте не менее 4 чисел в первой части поля</div>
             <div id="field-game-1" class="field__game">
-                ${fieldGame(page.activeFieldItem1)}
+                <div class="field__game-item">1</div><div class="field__game-item">2</div><div class="field__game-item">3</div><div class="field__game-item">4</div><div class="field__game-item">5</div><div class="field__game-item">6</div><div class="field__game-item">7</div><div class="field__game-item">8</div><div class="field__game-item">9</div><div class="field__game-item">10</div><div class="field__game-item">11</div><div class="field__game-item">12</div><div class="field__game-item">13</div><div class="field__game-item">14</div><div class="field__game-item">15</div><div class="field__game-item">16</div><div class="field__game-item">17</div><div class="field__game-item">18</div><div class="field__game-item">19</div><div class="field__game-item">20</div>
             </div>
         </div>
         <div class="main__field field">
             <div class="field__heading">Отметьте не менее 4 чисел во второй части поля</div>
             <div id="field-game-2" class="field__game">
-               ${fieldGame(page.activeFieldItem2)}
+               <div class="field__game-item">1</div><div class="field__game-item">2</div><div class="field__game-item">3</div><div class="field__game-item">4</div><div class="field__game-item">5</div><div class="field__game-item">6</div><div class="field__game-item">7</div><div class="field__game-item">8</div><div class="field__game-item">9</div><div class="field__game-item">10</div><div class="field__game-item">11</div><div class="field__game-item">12</div><div class="field__game-item">13</div><div class="field__game-item">14</div><div class="field__game-item">15</div><div class="field__game-item">16</div><div class="field__game-item">17</div><div class="field__game-item">18</div><div class="field__game-item">19</div><div class="field__game-item">20</div>
             </div>
         </div>
         <div class="fields__buttons">
@@ -68,5 +87,8 @@ export default function gamePage(page) {
         </div>
         <button id="apply-btn" class="button control__button">Подтвердить</button>
     </div>
-</div>`;
-};
+</div>`
+
+test('render window game', () => {
+  expect(pageGame(stateApp.gamePages[stateApp.selectPage])).toBe(testTrue);
+});

@@ -4,7 +4,7 @@ import { randomFieldGame, clearFieldGame } from './main__fields/random_clear_fie
 import { confirmBet, statusBet, countBetValue, renderBetValue } from './main__control/bets';
 import { renderCirculationSelector, renderQuantitySelect } from './main__control/selectors';
 import { renderDateStr } from './main__control/date';
-import { gamePage } from './pageTemplate';
+import gamePage from './pageTemplate';
 import { lang } from 'moment';
 
 const stateApp = {

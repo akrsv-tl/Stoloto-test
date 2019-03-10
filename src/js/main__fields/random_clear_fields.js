@@ -12,9 +12,8 @@ export function clearFieldGame(state) {
     state.render();
 }
 
-export function randomFieldGame(state, field) {
-    state.gamePages[state.selectPage]['activeFieldItem' + field] = [];
-    let fieldGame = state.gamePages[state.selectPage]['activeFieldItem' + field];
+export function getRandomFieldGame() {
+    const fieldGame = [];
 
     for(let i = 0; i < 4; i++) {
         let random;
@@ -24,5 +23,12 @@ export function randomFieldGame(state, field) {
         
         fieldGame.push(random);
     }
+
+    return fieldGame;
+}
+
+export function randomFieldGame(state, field) {
+    state.gamePages[state.selectPage]['activeFieldItem' + field] = getRandomFieldGame();
+   
     state.render(); 
 }
