@@ -2,7 +2,10 @@ export function clearFieldGame(state) {
     state.gamePages = {
         [state.selectPage]: {
             activeFieldItem1: [],
-            activeFieldItem2: []
+            activeFieldItem2: [],
+            betValue: 0,
+            quantity: 1,
+            circulation: 1
         }
     }
 

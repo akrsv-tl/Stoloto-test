@@ -41,30 +41,32 @@ export function gamePage(page) {
         <div class="control__selectors selectors">
             <div class="selectors__circulation">
                 <span class="control__text">Тираж</span>
-                <select class="control__selector--m" name="circulation" id="">
-                    <option value="1">№ 1291</option>
-                    <option value="2">№ 1292</option>
-                    <option value="3">№ 1293</option>
+                <select class="control__selector--m" name="circulation" id="circulation-selector">
+                    <option value="0">№ 1291</option>
+                    <option value="1">№ 1292</option>
+                    <option value="2">№ 1293</option>
                 </select>
-                <span class="control__text">8 мая 10:30</span>
+                <span id="date-str" class="control__text">8 мая 10:30</span>
             </div>
 
             <div class="selectors__quantity">
                 <span class="control__text">Кол-во тиражей:</span>
-                <select class="control__selector--s" name="quantity" id="">
+                <select class="control__selector--s" name="quantity" id="quantity-selector">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
 
             <div class="selectors__value">
                 <span class="control__text">Стоимость ставки</span>
-                <span class="control__text control__text--big">3 000 000</span>
+                <span id="bet-value" class="control__text control__text--big">3 000 000</span>
                 <span class="control__text">рублей</span>
             </div>
         </div>
-        <button class="button control__button">Подтвердить</button>
+        <button id="apply-btn" class="button control__button">Подтвердить</button>
     </div>
 </div>`;
 };

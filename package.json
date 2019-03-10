@@ -18,7 +18,9 @@
     "url": "https://github.com/A-Moreira/Stoloto-test/issues"
   },
   "homepage": "https://github.com/A-Moreira/Stoloto-test#readme",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",

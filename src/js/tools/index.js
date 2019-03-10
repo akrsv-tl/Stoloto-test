@@ -9,10 +9,3 @@ export function stringToNode(stringHtml) {
     wrapper.innerHTML= stringHtml;
     return wrapper.firstChild;
 }
-
-export function renderHtmlCode(node, html) {
-
-    removeChild(node);
-
-    node.innerHTML = html;
-}

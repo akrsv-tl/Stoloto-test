@@ -7,6 +7,9 @@
     height: 45px;
     border-radius: 8px;
     background-image: $select-gradient;
+    &:focus {
+        outline: none;
+    }
 }
 
 .control__selector--m {
@@ -14,4 +17,7 @@
     height: 45px;
     border-radius: 8px;
     background-image: $select-gradient;
+    &:focus {
+        outline: none;
+    }
 }

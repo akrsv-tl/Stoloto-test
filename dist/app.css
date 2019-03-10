@@ -159,12 +159,16 @@
   height: 45px;
   border-radius: 8px;
   background-image: linear-gradient(to top, #929292 0%, #c7c7c7 13%, #ffffff 100%); }
+  .control__selector--s:focus {
+    outline: none; }
 
 .control__selector--m {
   width: 106px;
   height: 45px;
   border-radius: 8px;
   background-image: linear-gradient(to top, #929292 0%, #c7c7c7 13%, #ffffff 100%); }
+  .control__selector--m:focus {
+    outline: none; }
 
 .selectors__quantity {
   margin-bottom: 15px; }
