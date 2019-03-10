@@ -1,6 +1,9 @@
 import { renderHtmlCode, removeChild, stringToNode } from './tools/index';
 import { toggleFieldGame } from './main__fields/toggle_fields';
 import { randomFieldGame, clearFieldGame } from './main__fields/random_clear_fields';
+import { confirmBet, statusBet, countBetValue, renderBetValue } from './main__control/bets';
+import { renderCirculationSelector, renderQuantitySelect } from './main__control/selectors';
+import { renderDateStr } from './main__control/date';
 import { gamePage } from './pageTemplate';
 import { lang } from 'moment';
 
@@ -24,21 +27,6 @@ const stateApp = {
     render: renderPageGame
 }
 
-const moment = require('moment');
-
-function renderDateStr(state) {
-    let dateStr = document.getElementById('date-str');
-    let circulation = state.gamePages[state.selectPage].circulation;
-    let date = moment().lang('ru').add(7 * circulation, 'days').format('DD MMMM 10:30');
-    
-    dateStr.innerText = date;
-}
-
-function renderCirculationSelector(state) {
-    var circulationSelector = document.getElementById('circulation-selector')
-    circulationSelector.value = state.gamePages[state.selectPage].circulation;
-}
-
 function renderHeaderTabs(state, action) {
     if(action !== undefined && action !== null) {
         state.headerTabs.querySelector(`li[value="${action}"]`)
@@ -51,15 +39,6 @@ function renderHeaderTabs(state, action) {
     }
 
     state.selectPage = action;
-}
-
-function renderQuantitySelect(state) {
-    var quantitySelector = document.getElementById('quantity-selector');
-    quantitySelector.value = state.gamePages[state.selectPage].quantity;
-}
-
-function renderBetValue(state) {
-    document.getElementById('bet-value').innerText = state.betValue;
 }
 
 function renderApplyBtn(state) {
@@ -151,41 +130,7 @@ stateApp.headerTabs.addEventListener('click', e => {
 
     renderHeaderTabs(stateApp, value);
     stateApp.render();
-
 });
-
-function confirmBet() {
-    alert('Ставка принята');
-}
-
-function statusBet(state) {
-    let lengthActiveFieldItem1 = state.gamePages[state.selectPage].activeFieldItem1.length;
-    let lengthActiveFieldItem2 = state.gamePages[state.selectPage].activeFieldItem2.length;
-    let checkLength = lengthActiveFieldItem1 >= 4 && lengthActiveFieldItem2 >= 4;
-    let checkMinBetValue = lengthActiveFieldItem1 === 4 && lengthActiveFieldItem2 === 4;
-    let lengthActiveFields = lengthActiveFieldItem1 + lengthActiveFieldItem2;
-    
-    if(!checkLength) {
-        stateApp.gamePages[stateApp.selectPage].betValue = 0;
-    }
-
-    if(checkMinBetValue) {
-        stateApp.gamePages[stateApp.selectPage].betValue = 100;
-    }
-
-    state.apply = checkLength;
-    countBetValue(state);
-}
-
-function countBetValue(state) {
-    var betValue = 0;
-
-    for( let key in state.gamePages) {
-        betValue += state.gamePages[key].betValue * state.gamePages[key].quantity;
-    }
-
-    state.betValue = betValue;
-}
 
 //Точка входа(Первоначальная отрисовка)
 stateApp.render();
